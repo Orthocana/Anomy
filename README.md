@@ -1,2 +1,2 @@
 # Anomy
-Encryption Tool made with WPF.
+Encryption Tool for Windows.
