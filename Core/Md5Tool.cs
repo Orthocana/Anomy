@@ -4,7 +4,7 @@ using System.Security.Cryptography;
 
 namespace Core {
     
-    public class Md5 {
+    public class Md5Tool {
         
         public string EncryptMd5Hash(string toBeEncrypted, string passwordToUse) {
             byte[] data = Encoding.UTF8.GetBytes(toBeEncrypted);

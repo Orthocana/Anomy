@@ -3,7 +3,7 @@ using System.IO;
 using System.Security.Cryptography;
 
 namespace Core {
-    public class RsaEnc {
+    public class RsaTool {
 
         /// <summary>
         /// Generates Public and Private Keys if doesn't exist.
@@ -64,7 +64,7 @@ namespace Core {
             var xs = new System.Xml.Serialization.XmlSerializer(typeof(RSAParameters));
             return (RSAParameters)xs.Deserialize(sr);
         }
-        
+
         /// <summary>
         /// Encrypts a String
         /// </summary>

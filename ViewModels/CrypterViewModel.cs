@@ -4,8 +4,8 @@ using Microsoft.Win32;
 
 namespace Anomy.ViewModels {
     class CrypterViewModel {
-        private readonly RsaEnc _rs = new RsaEnc();
-        private readonly Core.Md5 mdf = new Md5();
+        private readonly RsaTool _rs = new RsaTool();
+        //private readonly Md5Tool mdf = new Md5Tool();
 
         private string _publicKeyFilePath = "./public.cert";
         private string _privateKeyFilePath = "./private.key";

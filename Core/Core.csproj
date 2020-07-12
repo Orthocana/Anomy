@@ -41,11 +41,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AES.cs" />
-    <Compile Include="Core.cs" />
-    <Compile Include="Md5.cs" />
+    <Compile Include="AesTool.cs" />
+    <Compile Include="Md5Tool.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SHA256.cs" />
+    <Compile Include="RsaTool.cs" />
+    <Compile Include="Sha256Tool.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

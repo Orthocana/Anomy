@@ -70,6 +70,8 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Models\Crypto.cs" />
+    <Compile Include="ViewModels\AESViewModel.cs" />
     <Compile Include="Views\Decrypt.xaml.cs">
       <DependentUpon>Decrypt.xaml</DependentUpon>
     </Compile>
@@ -99,9 +101,6 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Models\DecryptedText.cs" />
-    <Compile Include="Models\EncryptedText.cs" />
-    <Compile Include="Models\KeyPair.cs" />
     <Compile Include="ViewModels\CrypterViewModel.cs" />
     <Compile Include="ViewModels\MainViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
