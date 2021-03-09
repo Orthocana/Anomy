@@ -7,15 +7,15 @@
         Title="Anomy" Height="453" Width="800" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" WindowStyle="None" SnapsToDevicePixels="True" Background="#FF1A1A1A">
     <Grid>
         <StatusBar HorizontalAlignment="Left" Height="37" Margin="10,413,0,0" VerticalAlignment="Top" Width="780" Background="{x:Null}" Foreground="#FF802448">
-            <Label x:Name="StatusLabel" Content="To Quit Use Alt+F4" Height="25" Width="781" IsEnabled="False" Foreground="#FF802448"/>
+            <Label x:Name="StatusLabel" Content="To Quit Use Alt+F4" Height="25" Width="781" IsEnabled="False" Foreground="White"/>
         </StatusBar>
         <TabControl x:Name="MainTab" HorizontalAlignment="Left" Height="413" VerticalAlignment="Top" Width="794" Background="{x:Null}" Foreground="{x:Null}" BorderBrush="#FF802448">
             <!--Encryption Section-->
             <TabItem x:Name="EncryptTab" Header="Encrypt" Margin="-2,0,-32,-2" Foreground="#FF802448" Background="{x:Null}" BorderBrush="#FF802448">
                 <Grid Background="#FF1A1A1A">
-                    <Button x:Name="GenerateBtn" Content="Generate Key Pair" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="110" Height="34" Background="#FF802448" BorderBrush="{x:Null}" Foreground="White"/>
-                    <Button x:Name="OpenPublic" Content="Open Public Key" HorizontalAlignment="Left" Margin="125,10,0,0" VerticalAlignment="Top" Width="110" Height="34"  Foreground="White" BorderBrush="{x:Null}" Background="#FF802448"/>
-                    <Button x:Name="EncryptBtn" Content="Encrypt" HorizontalAlignment="Left" Margin="11,91,0,0" VerticalAlignment="Top" Width="225" Height="34" Foreground="White" Background="#FF802448" BorderBrush="{x:Null}"/>
+                    <Button x:Name="GenerateBtn" Content="Generate Key Pair" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="110" Height="34" Background="#FF802448" BorderBrush="{x:Null}" Foreground="White" Click="GenerateBtn_Click"/>
+                    <Button x:Name="OpenPublic" Content="Open Public Key" HorizontalAlignment="Left" Margin="125,10,0,0" VerticalAlignment="Top" Width="110" Height="34"  Foreground="White" BorderBrush="{x:Null}" Background="#FF802448" Click="OpenPublic_Click"/>
+                    <Button x:Name="EncryptBtn" Content="Encrypt" HorizontalAlignment="Left" Margin="11,91,0,0" VerticalAlignment="Top" Width="225" Height="34" Foreground="White" Background="#FF802448" BorderBrush="{x:Null}" Click="EncryptBtn_Click"/>
                     <Label Content="Password" HorizontalAlignment="Left" Margin="10,52,0,0" VerticalAlignment="Top" Width="60" Height="34" Foreground="White"/>
                     <PasswordBox x:Name="EncryptionPassword" HorizontalAlignment="Left" Margin="75,52,0,0" VerticalAlignment="Top" Width="160" Height="34" Background="{x:Null}" BorderBrush="#FF802448" Foreground="White" SelectionBrush="#FF802448"/>
                     <TextBox x:Name="TextToEncrypt" HorizontalAlignment="Left" Height="115" Margin="253,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="523" ToolTip="Text to Encrypt" Text="Paste Here your Link/Text" Background="{x:Null}" BorderBrush="#FF802448" Foreground="White" SelectionBrush="#FF802448" />
@@ -25,8 +25,8 @@
             <!--Decryption Section-->
             <TabItem x:Name="DecryptTab" Header="Decrypt" Margin="30,0,-57,-2" Background="{x:Null}" Foreground="#FF802448" BorderBrush="#FF802448">
                 <Grid Background="#FF1A1A1A">
-                    <Button x:Name="OpenPrivate" Content="Open Private Key" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="225" Height="34" Background="#FF802448" Foreground="White" BorderBrush="{x:Null}"/>
-                    <Button x:Name="DecryptBtn" Content="Decrypt" HorizontalAlignment="Left" Margin="10,91,0,0" VerticalAlignment="Top" Width="225" Height="34" Background="#FF802448" BorderBrush="{x:Null}" Foreground="White"/>
+                    <Button x:Name="OpenPrivate" Content="Open Private Key" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="225" Height="34" Background="#FF802448" Foreground="White" BorderBrush="{x:Null}" Click="OpenPrivate_Click"/>
+                    <Button x:Name="DecryptBtn" Content="Decrypt" HorizontalAlignment="Left" Margin="10,91,0,0" VerticalAlignment="Top" Width="225" Height="34" Background="#FF802448" BorderBrush="{x:Null}" Foreground="White" Click="DecryptBtn_Click"/>
                     <Label Content="Password" HorizontalAlignment="Left" Margin="10,52,0,0" VerticalAlignment="Top" Width="60" Height="34" Foreground="White"/>
                     <PasswordBox x:Name="DecryptionPassword" HorizontalAlignment="Left" Margin="75,52,0,0" VerticalAlignment="Top" Width="160" Height="34" Background="{x:Null}" SelectionBrush="#FF802448" Foreground="White" BorderBrush="#FF802448"/>
                     <TextBox x:Name="BoxToDecrypt" HorizontalAlignment="Left" Height="115" Margin="253,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="523" ToolTip="Text to Encrypt" Text="Paste Here your cyphered Text/Link Here" BorderBrush="#FF802448" Foreground="White" Background="{x:Null}" SelectionBrush="#FF802448" />

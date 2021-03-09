@@ -1,21 +1,14 @@
 ﻿using System;
 using System.IO;
+using Microsoft.Win32;
 using System.Security.Cryptography;
 
 namespace Core {
     public class RsaTool {
-
         /// <summary>
         /// Generates Public and Private Keys if doesn't exist.
         /// </summary>
-        /// <param name="publicKeyFile">Public Key File Path</param>
-        /// <param name="privateKeyFile">Private Key File Path</param>
-        public void GenerateKeys(string publicKeyFile, string privateKeyFile) {
-            if (File.Exists(publicKeyFile))
-                File.Delete(publicKeyFile);
-            if (File.Exists(privateKeyFile))
-                File.Delete(privateKeyFile);
-
+        public void GenerateKeys() {
             using (var rsa = new RSACryptoServiceProvider(2048)) {
                 rsa.PersistKeyInCsp = false;
 
@@ -36,8 +29,22 @@ namespace Core {
                     privKeyString = sw.ToString();
                 }
 
-                File.WriteAllText(privateKeyFile, privKeyString);
-                File.WriteAllText(publicKeyFile, pubKeyString);
+                SaveFileDialog PrivateSfd = new SaveFileDialog();
+                PrivateSfd.FileName = "private";
+                PrivateSfd.DefaultExt = ".key";
+                PrivateSfd.Title = "Choose the path for your private.key file";
+                if (PrivateSfd.ShowDialog() == true) {
+                    File.WriteAllText(PrivateSfd.FileName, privKeyString);
+                }
+
+                SaveFileDialog PublicSfd = new SaveFileDialog();
+                PublicSfd.FileName = "public";
+                PublicSfd.DefaultExt = ".cert"; 
+                PublicSfd.Title = "Choose the path for your public.cert file";
+                if (PublicSfd.ShowDialog() == true) {
+                    File.WriteAllText(PublicSfd.FileName, pubKeyString);
+                }
+                
             }
         }
 

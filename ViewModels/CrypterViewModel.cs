@@ -12,7 +12,7 @@ namespace Anomy.ViewModels {
 
         private void GenerateBtn_Click(object sender, RoutedEventArgs e) {
             //Status_Label.Content = "Generating Keys...";
-            _rs.GenerateKeys(_publicKeyFilePath, _privateKeyFilePath);
+            //_rs.GenerateKeys(_publicKeyFilePath, _privateKeyFilePath);
             //Status_Label.Content = "Generated Keys.";
         }
 
